@@ -1,0 +1,179 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "UnitKirish.h"
+#include "QogiroqQirishi.h"
+#include "UnitIjtimoyiTarmoqlarda.h"
+#include "UnitTolovQabulQilish.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TFormKIRISH *FormKIRISH;
+//---------------------------------------------------------------------------
+__fastcall TFormKIRISH::TFormKIRISH(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormKIRISH::ButtonQogiroqQirishivClick(TObject *Sender)
+{
+FormQogiroqQirishi->ShowModal();
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormKIRISH::ButtonIjtimoyiTarmoqlardaClick(TObject *Sender)
+{
+FormIjtimoyiTarmoq->ShowModal();
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormKIRISH::ButtonTolovQabulQilishClick(TObject *Sender)
+{
+FormTolovQabulQilish->ShowModal();
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormKIRISH::Button1Click(TObject *Sender)
+{
+Close();
+}
+//---------------------------------------------------------------------------
+
+#ifndef UnitKirishH
+#define UnitKirishH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+//---------------------------------------------------------------------------
+class TFormKIRISH : public TForm
+{
+__published:	// IDE-managed Components
+	TButton *ButtonQogiroqQirishiv;
+	TButton *ButtonIjtimoyiTarmoqlarda;
+	TButton *ButtonTolovQabulQilish;
+	TButton *Button1;
+	void __fastcall ButtonQogiroqQirishivClick(TObject *Sender);
+	void __fastcall ButtonIjtimoyiTarmoqlardaClick(TObject *Sender);
+	void __fastcall ButtonTolovQabulQilishClick(TObject *Sender);
+	void __fastcall Button1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFormKIRISH(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFormKIRISH *FormKIRISH;
+//---------------------------------------------------------------------------
+#endif
+//---------------------------------------------------------------------------
+
+#ifndef QogiroqQirishiH
+#define QogiroqQirishiH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.DBGrids.hpp>
+#include <Vcl.Grids.hpp>
+#include <Vcl.Buttons.hpp>
+#include <SHDocVw.hpp>
+#include <Vcl.OleCtrls.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ExtCtrls.hpp>
+//---------------------------------------------------------------------------
+class TFormQogiroqQirishi : public TForm
+{
+__published:	// IDE-managed Components
+	TDBGrid *DBGrid1;
+	TBitBtn *BitBtn1;
+	TWebBrowser *WebBrowser1;
+	TLabel *Label1;
+	TBitBtn *BitBtn2;
+	TLabel *Label2;
+	TMonthCalendar *MonthCalendar1;
+	TLabel *Label3;
+	TTimer *Timer1;
+	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall BitBtn1Click(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
+	void __fastcall Timer1Timer(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFormQogiroqQirishi(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFormQogiroqQirishi *FormQogiroqQirishi;
+//---------------------------------------------------------------------------
+#endif
+#include <vcl.h>
+#pragma hdrstop
+
+#include "UnitIjtimoyiTarmoqlarda.h"
+#include "UnitKirish.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TFormIjtimoyiTarmoq *FormIjtimoyiTarmoq;
+//---------------------------------------------------------------------------
+__fastcall TFormIjtimoyiTarmoq::TFormIjtimoyiTarmoq(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormIjtimoyiTarmoq::Button1Click(TObject *Sender)
+{
+WebBrowser1->Navigate("t.me/@Umidjon_Uktamov");
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormIjtimoyiTarmoq::BitBtn1Click(TObject *Sender)
+{
+Close();
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormIjtimoyiTarmoq::Button2Click(TObject *Sender)
+{
+ WebBrowser1->Navigate("https://www.google.com/");
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TFormIjtimoyiTarmoq::Button4Click(TObject *Sender)
+{
+  WebBrowser1->Navigate("https://www.facebook.com/");
+}
+
+//---------------------------------------------------------------------------
+
+#ifndef UnitIjtimoyiTarmoqlardaH
+#define UnitIjtimoyiTarmoqlardaH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <SHDocVw.hpp>
+#include <Vcl.OleCtrls.hpp>
+#include <Vcl.Buttons.hpp>
+//---------------------------------------------------------------------------
+class TFormIjtimoyiTarmoq : public TForm
+{
+__published:	// IDE-managed Components
+	TButton *Button1;
+	TWebBrowser *WebBrowser1;
+	TBitBtn *BitBtn1;
+	TButton *Button2;
+	TButton *Button3;
+	TButton *Button4;
+	void __fastcall Button1Click(TObject *Sender);
+	void __fastcall BitBtn1Click(TObject *Sender);
+	void __fastcall Button2Click(TObject *Sender);
+	void __fastcall Button4Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TFormIjtimoyiTarmoq(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TFormIjtimoyiTarmoq *FormIjtimoyiTarmoq;
+//---------------------------------------------------------------------------
+#endif
